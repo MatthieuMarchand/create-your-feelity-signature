@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Créer sa signature Feelity</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <section id="console">
+        <label for="img">Image (format carré 1:1)</label>
+        <input id="inputImg" name="img" type="text" placeholder="https://mon-image.webp">
+        <label for="name">Prénom Nom</label>
+        <input id="inputName" name="name" type="text" placeholder="Benjamin Catinot">
+        <label for="title">Titre</label>
+        <input id="inputTitle" name="title" type="text" placeholder="Co-Fondateur - CTO @Feelity">
+        <label for="mail">Mail</label>
+        <input id="inputMail" name="mail" type="text" placeholder="bcatinot@feelity.fr">
+        <label for="tel">Numéro de téléphone</label>
+        <input id="inputTel" name="tel" type="text" placeholder="0642966109">
+        <label for="address">Adresse</label>
+        <input id="inputAddress" name="address" type="text" placeholder="8 rue Lassere">
+        <label for="postal">Code postal et ville</label>
+        <input id="inputPostal" name="postal" type="text" placeholder="33800 Bordeaux">
+    </section>
+
+    <table id="signature" border="0" cellpadding="0" cellspacing="0" width="548" height="196" style="
+        padding-top: 24px;
+        padding-bottom: 24px;
+        background-color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+    ">
+        <tr>
+            <td width="146" align="center">
+                <img id="srcImg"
+                    src="https://media.licdn.com/dms/image/C4E03AQF7dmpo0kLHCA/profile-displayphoto-shrink_100_100/0/1525440859677?e=1723075200&v=beta&t=hQ5MLROaO38mKrR0xN_k9le6Z7M4ptduANgOvTul98w"
+                    alt="portrait" width="80" height="80" style="
+                    border-radius: 100%;
+                ">
+
+                <img src="https://www.feelity.fr/wp-content/uploads/2024/06/signature_logo_feelity.png"
+                    alt="Logo Feelity" width="80" style="margin-top: 16px;">
+
+                <p style="margin: 4px 0 0 0;">www.feelity.fr</p>
+            </td>
+
+            <td width="1" style="background: #E0E0E0;"></td>
+
+            <td style="
+                padding: 0 40px 0 32px;
+                font-size: 18px;
+                vertical-align: top;
+            ">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td style="padding: unset;">
+                            <h1 id="textName" style="
+                                margin: 0;
+                                font-size: 22px;
+                                font-weight: 700;
+                            ">Benjamin Catinot</h1>
+                        </td>
+
+                        <td width="32" style="padding: unset;">
+                            <img src="https://www.feelity.fr/wp-content/uploads/2024/06/signature_logo_linkedin.png"
+                                alt="Logo LinkedIn" width="32" height="32">
+                        </td>
+                    </tr>
+                </table>
+
+                <p id="textTitle" style="margin: 7px 0 0 0;">Co-Fondateur - CTO @Feelity</p>
+
+                <div id="personal-information" style="
+                    color: #85878C;
+                    margin-top: 35px;
+                ">
+                    <div id="contacts" style="
+                        display: inline-block;
+                    ">
+                        <p id="textMail" style="margin: 0;">bcatinot@feelity.fr</p>
+
+                        <p id="textTel" style="margin: 7px 0 0 0;">0642966109</p>
+                    </div>
+
+                    <div id="address" style="
+                        display: inline-block;
+                        margin-top: 7px;
+                    ">
+                        <p id="textAddress" style="margin: 0;">8 rue Lassere</p>
+
+                        <p id="textPostal" style="
+                            margin: 0;
+                            margin-top: 7px;
+                        ">33800 Bordeaux</p>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
