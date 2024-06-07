@@ -14,8 +14,27 @@
 
 <body>
     <section id="console">
-        <label for="img">Image (format carré 1:1)</label>
-        <input id="inputImg" name="img" type="text" placeholder="https://mon-image.webp">
+        <div id="divInputImg">
+            <div>
+                <label for="img">Image (format carré 1:1)</label>
+                <input id="inputImg" name="img" type="text" placeholder="https://mon-image.webp">
+            </div>
+            <select id="imageSelector">
+                <option value="" disabled selected>Choisir une image</option>
+                <option value="https://www.feelity.fr/wp-content/uploads/2024/06/amaury.jpg">Amaury</option>
+                <option value="https://www.feelity.fr/wp-content/uploads/2024/06/aureliane.jpg">Aureliane</option>
+                <option value="https://www.feelity.fr/wp-content/uploads/2024/06/aurelien.jpg">Aurelien</option>
+                <option value="https://www.feelity.fr/wp-content/uploads/2024/06/benjamin.jpg">Benjamin</option>
+                <option value="https://www.feelity.fr/wp-content/uploads/2024/06/bettina.jpg">Bettina</option>
+                <option value="https://www.feelity.fr/wp-content/uploads/2024/06/denis.jpg">Denis</option>
+                <option value="https://www.feelity.fr/wp-content/uploads/2024/06/dorian.jpg">Dorian</option>
+                <option value="https://www.feelity.fr/wp-content/uploads/2024/06/eva.jpg">Eva</option>
+                <option value="https://www.feelity.fr/wp-content/uploads/2024/06/marius.jpg">Marius</option>
+                <option value="https://www.feelity.fr/wp-content/uploads/2024/06/matthieu.jpg">Matthieu</option>
+                <option value="https://www.feelity.fr/wp-content/uploads/2024/06/pierre-yves.jpg">Pierre-Yves</option>
+                <option value="https://www.feelity.fr/wp-content/uploads/2024/06/sandrine.jpg">Sandrine</option>
+            </select>
+        </div>
         <label for="name">Prénom Nom</label>
         <input id="inputName" name="name" type="text" placeholder="Benjamin Catinot">
         <label for="title">Titre</label>
@@ -41,11 +60,8 @@
     ">
         <tr>
             <td width="146" align="center">
-                <img id="srcImg"
-                    src="https://media.licdn.com/dms/image/C4E03AQF7dmpo0kLHCA/profile-displayphoto-shrink_100_100/0/1525440859677?e=1723075200&v=beta&t=hQ5MLROaO38mKrR0xN_k9le6Z7M4ptduANgOvTul98w"
-                    alt="portrait" width="80" height="80" style="
-                    border-radius: 100%;
-                ">
+                <img id="srcImg" src="https://www.feelity.fr/wp-content/uploads/2024/06/benjamin.jpg" alt="portrait"
+                    width="80" height="80" style="border-radius: 100%;">
 
                 <img src="https://www.feelity.fr/wp-content/uploads/2024/06/signature_logo_feelity.png"
                     alt="Logo Feelity" width="80" style="margin-top: 16px;">

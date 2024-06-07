@@ -6,6 +6,9 @@ body {
 }
 
 section#console {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,6 +18,25 @@ section#console {
   font-family: Arial, Helvetica, sans-serif;
   color: #202020;
   font-size: 20px;
+}
+section#console #divInputImg {
+  display: flex;
+  align-items: end;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+section#console #divInputImg select {
+  height: 3.5rem;
+  border-radius: 0;
+  border: solid 0.5px #202020;
+  padding: 1rem 0.5rem;
+}
+section#console #divInputImg div {
+  display: flex;
+  flex-direction: column;
+}
+section#console #divInputImg div input {
+  margin-bottom: unset;
 }
 
 input {
@@ -26,14 +48,12 @@ input {
   border-radius: 0;
   border: solid 0.5px #202020;
 }
-
 input::-moz-placeholder {
   font-family: Arial, Helvetica, sans-serif;
   color: #808080;
   font-size: 20px;
   font-weight: 100;
 }
-
 input::placeholder {
   font-family: Arial, Helvetica, sans-serif;
   color: #808080;
@@ -43,4 +63,4 @@ input::placeholder {
 
 table#signature {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-}
+}/*# sourceMappingURL=style.css.map */
