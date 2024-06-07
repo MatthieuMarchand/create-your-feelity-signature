@@ -46,10 +46,6 @@
         <input id="inputMail" name="mail" type="text" placeholder="bcatinot@feelity.fr" autocomplete="off">
         <label for="tel">Numéro de téléphone</label>
         <input id="inputTel" name="tel" type="text" placeholder="0642966109" autocomplete="off">
-        <label for="address">Adresse</label>
-        <input id="inputAddress" name="address" type="text" placeholder="8 rue Lassere" autocomplete="off">
-        <label for="postal">Code postal et ville</label>
-        <input id="inputPostal" name="postal" type="text" placeholder="33800 Bordeaux" autocomplete="off">
     </section>
 
     <section id="container-signature">
@@ -76,7 +72,12 @@
                     <img src="https://www.feelity.fr/wp-content/uploads/2024/06/signature_logo_feelity.png"
                         alt="Logo Feelity" width="80" style="margin-top: 16px;">
 
-                    <p style="margin: 4px 0 0 0;">www.feelity.fr</p>
+                    <a href="https://www.feelity.fr/" target="_blank" style="
+                        margin: 4px 0 0 0;
+                        text-decoration: unset;
+                        color: black;
+                        font-size: 16px;
+                    ">www.feelity.fr</a>
                 </td>
 
                 <td width="1" style="background: #E0E0E0;"></td>
@@ -115,22 +116,34 @@
                         <div id="contacts" style="
                             display: inline-block;
                         ">
-                            <p id="textMail" style="margin: 0;">bcatinot@feelity.fr</p>
+                            <p style="margin: 0;">
+                                <a id="hrefMail" href="mailto:bcatinot@feelity.fr" style="
+                                    color: #85878C;
+                                    text-decoration: unset;
+                                ">bcatinot@feelity.fr</a>
+                            </p>
 
-                            <p id="textTel" style="margin: 7px 0 0 0;">0642966109</p>
+                            <p style="margin: 7px 0 0 0;">
+                                <a id="hrefTel" href="tel:+330642966109" style="
+                                    color: #85878C;
+                                    text-decoration: unset;
+                                ">0642966109</a>
+                            </p>
                         </div>
 
-                        <div id="address" style="
+                        <a href="https://maps.app.goo.gl/NcHTBKmKug67GPvm8" target="_blank" id="address" style="
                             display: inline-block;
                             margin-top: 7px;
+                            color: #85878C;
+                            text-decoration: unset;
                         ">
-                            <p id="textAddress" style="margin: 0;">8 rue Lassere</p>
+                            <p style="margin: 0;">8 rue Lassere</p>
 
-                            <p id="textPostal" style="
+                            <p style="
                                 margin: 0;
                                 margin-top: 7px;
                             ">33800 Bordeaux</p>
-                        </div>
+                        </a>
                     </div>
                 </td>
             </tr>
