@@ -3,15 +3,15 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #202020;
 }
 
 section#console {
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #202020;
-  font-size: 20px;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -59,9 +59,30 @@ section#console #divInputImg div input {
 
 section#container-signature {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
   flex-grow: 1;
+}
+section#container-signature #guide {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  line-height: 150%;
+}
+section#container-signature #guide kbd {
+  background-color: #eee;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+  color: #333;
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  white-space: nowrap;
 }
 section#container-signature table#signature {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
