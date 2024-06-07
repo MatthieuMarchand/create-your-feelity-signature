@@ -1,21 +1,35 @@
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 section#console {
-    user-select: none;
-    position: fixed;
-    top: 0;
-    left: 0;
     display: flex;
     flex-direction: column;
     padding: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     color: #202020;
     font-size: 20px;
+    user-select: none;
+
+    input {
+        font-size: 20px;
+        margin-bottom: 2rem;
+        margin-top: 0.5rem;
+        width: 20rem;
+        padding: 1rem 0.5rem;
+        border-radius: 0;
+        border: solid 0.5px #202020;
+
+        &::placeholder {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #808080;
+            font-size: 20px;
+            font-weight: 100;
+        }
+    }
 
     #divInputImg {
         display: flex;
@@ -41,23 +55,13 @@ section#console {
     }
 }
 
-input {
-    font-size: 20px;
-    margin-bottom: 2rem;
-    margin-top: 0.5rem;
-    width: 20rem;
-    padding: 1rem 0.5rem;
-    border-radius: 0;
-    border: solid 0.5px #202020;
+section#container-signature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
 
-    &::placeholder {
-        font-family: Arial, Helvetica, sans-serif;
-        color: #808080;
-        font-size: 20px;
-        font-weight: 100;
+    table#signature {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
     }
-}
-
-table#signature {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
