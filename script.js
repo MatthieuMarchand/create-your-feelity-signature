@@ -1,61 +1,47 @@
+const setDefaultIfEmpty = (input, element, defaultValue) => {
+    element.innerHTML = input.value || defaultValue;
+    createsMarginInContacts();
+};
+
+const updateSrcIfEmpty = (input, element, defaultValue) => {
+    element.src = input.value || defaultValue;
+    createsMarginInContacts();
+};
 
 const createsMarginInContacts = () => {
-    const divPersonalInformation = document.getElementById('personal-information');
-    const divContacts = document.getElementById('contacts');
-    const divAddress = document.getElementById('address');
+    const getElementWidth = id => document.getElementById(id).offsetWidth;
 
-    const marginRight = divPersonalInformation.offsetWidth - divContacts.offsetWidth - divAddress.offsetWidth - 5.2;
+    const divPersonalInformationWidth = getElementWidth('personal-information');
+    const divContactsWidth = getElementWidth('contacts');
+    const divAddressWidth = getElementWidth('address');
 
-    divContacts.style.marginRight = marginRight + 'px';
-}
+    const marginRight = divPersonalInformationWidth - divContactsWidth - divAddressWidth - 5.2;
+    document.getElementById('contacts').style.marginRight = `${marginRight}px`;
+};
+
+const addInputEventListener = (inputId, elementId, defaultValue, updater) => {
+    const input = document.getElementById(inputId);
+    const element = document.getElementById(elementId);
+    input.addEventListener('input', () => updater(input, element, defaultValue));
+};
 
 const createsEventListenersOnInputs = () => {
-    inputImg.addEventListener('input', () => {
-        srcImg.src = inputImg.value;
-        createsMarginInContacts();
-    })
-    inputName.addEventListener('input', () => {
-        textName.innerHTML = inputName.value;
-        createsMarginInContacts();
-    })
-    inputTitle.addEventListener('input', () => {
-        textTitle.innerHTML = inputTitle.value;
-        createsMarginInContacts();
-    })
-    inputMail.addEventListener('input', () => {
-        textMail.innerHTML = inputMail.value;
-        createsMarginInContacts();
-    })
-    inputTel.addEventListener('input', () => {
-        textTel.innerHTML = inputTel.value;
-        createsMarginInContacts();
-    })
-    inputAddress.addEventListener('input', () => {
-        textAddress.innerHTML = inputAddress.value;
-        createsMarginInContacts();
-    })
-    inputPostal.addEventListener('input', () => {
-        textPostal.innerHTML = inputPostal.value;
-        createsMarginInContacts();
-    })
-}
+    const inputMappings = [
+        { inputId: 'inputImg', elementId: 'srcImg', defaultValue: 'https://media.licdn.com/dms/image/C4E03AQF7dmpo0kLHCA/profile-displayphoto-shrink_100_100/0/1525440859677?e=1723075200&v=beta&t=hQ5MLROaO38mKrR0xN_k9le6Z7M4ptduANgOvTul98w', updater: updateSrcIfEmpty },
+        { inputId: 'inputName', elementId: 'textName', defaultValue: 'Benjamin Catinot', updater: setDefaultIfEmpty },
+        { inputId: 'inputTitle', elementId: 'textTitle', defaultValue: 'Co-Fondateur - CTO @Feelity', updater: setDefaultIfEmpty },
+        { inputId: 'inputMail', elementId: 'textMail', defaultValue: 'bcatinot@feelity.fr', updater: setDefaultIfEmpty },
+        { inputId: 'inputTel', elementId: 'textTel', defaultValue: '0642966109', updater: setDefaultIfEmpty },
+        { inputId: 'inputAddress', elementId: 'textAddress', defaultValue: '8 rue Lassere', updater: setDefaultIfEmpty },
+        { inputId: 'inputPostal', elementId: 'textPostal', defaultValue: '33800 Bordeaux', updater: setDefaultIfEmpty }
+    ];
+
+    inputMappings.forEach(({ inputId, elementId, defaultValue, updater }) =>
+        addInputEventListener(inputId, elementId, defaultValue, updater)
+    );
+};
 
 window.addEventListener('DOMContentLoaded', () => {
-    const inputImg = document.getElementById('inputImg');
-    const inputName = document.getElementById('inputName');
-    const inputTitle = document.getElementById('inputTitle');
-    const inputMail = document.getElementById('inputMail');
-    const inputTel = document.getElementById('inputTel');
-    const inputAddress = document.getElementById('inputAddress');
-    const inputPostal = document.getElementById('inputPostal');
-    const srcImg = document.getElementById('srcImg');
-    const textName = document.getElementById('textName');
-    const textTitle = document.getElementById('textTitle');
-    const textMail = document.getElementById('textMail');
-    const textTel = document.getElementById('textTel');
-    const textAddress = document.getElementById('textAddress');
-    const textPostal = document.getElementById('textPostal');
-
     createsMarginInContacts();
     createsEventListenersOnInputs();
 });
