@@ -8,6 +8,11 @@ const updateSrcIfEmpty = (input, element, defaultValue) => {
     createsMarginInContacts();
 };
 
+const updateHrefIfEmpty = (input, element, defaultValue) => {
+    element.href = input.value || defaultValue;
+    createsMarginInContacts();
+};
+
 const createsMarginInContacts = () => {
     const getElementWidth = id => document.getElementById(id).offsetWidth;
 
@@ -30,6 +35,7 @@ const createsEventListenersOnInputs = () => {
         { inputId: 'inputImg', elementId: 'srcImg', defaultValue: 'https://media.licdn.com/dms/image/C4E03AQF7dmpo0kLHCA/profile-displayphoto-shrink_100_100/0/1525440859677?e=1723075200&v=beta&t=hQ5MLROaO38mKrR0xN_k9le6Z7M4ptduANgOvTul98w', updater: updateSrcIfEmpty },
         { inputId: 'inputName', elementId: 'textName', defaultValue: 'Benjamin Catinot', updater: setDefaultIfEmpty },
         { inputId: 'inputTitle', elementId: 'textTitle', defaultValue: 'Co-Fondateur - CTO @Feelity', updater: setDefaultIfEmpty },
+        { inputId: 'inputLinkedin', elementId: 'hrefLinkedin', defaultValue: 'https://www.linkedin.com/company/feelity/mycompany/', updater: updateHrefIfEmpty },
         { inputId: 'inputMail', elementId: 'textMail', defaultValue: 'bcatinot@feelity.fr', updater: setDefaultIfEmpty },
         { inputId: 'inputTel', elementId: 'textTel', defaultValue: '0642966109', updater: setDefaultIfEmpty },
         { inputId: 'inputAddress', elementId: 'textAddress', defaultValue: '8 rue Lassere', updater: setDefaultIfEmpty },
