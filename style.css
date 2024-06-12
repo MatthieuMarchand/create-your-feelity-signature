@@ -65,25 +65,94 @@ section#container-signature {
   gap: 2rem;
   flex-grow: 1;
 }
+section#container-signature table#signature {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
 section#container-signature #guide {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   line-height: 150%;
 }
-section#container-signature #guide kbd {
-  background-color: #eee;
-  border-radius: 3px;
-  border: 1px solid #b4b4b4;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
-  color: #333;
+section#container-signature #guide ol {
+  font-size: 18px;
+}
+section#container-signature #guide ol ul {
+  margin: 0.25rem 0 1rem;
+}
+section#container-signature #guide ol ul li {
+  font-size: 16px;
+}
+section#container-signature #guide #copyButton {
   display: inline-block;
+  padding: 0.5rem 0.5rem;
+  background-color: #eee;
+  border: 1px solid #b4b4b4;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+  color: rgba(0, 0, 0, 0.7);
   font-size: 0.85em;
-  font-weight: 700;
   line-height: 1;
+  white-space: nowrap;
+  transition: 0.1s;
+  transition-timing-function: ease;
+}
+section#container-signature #guide #copyButton:hover {
+  color: black;
+}
+section#container-signature #guide #copyButton:active {
+  box-shadow: 0 0.5px 1px 0.5px rgba(0, 0, 0, 0.2) inset;
+}
+section#container-signature #guide kbd {
+  display: inline-block;
   padding: 0.25rem 0.5rem;
+  background-color: #eee;
+  border: 1px solid #b4b4b4;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.85em;
+  line-height: 1;
   white-space: nowrap;
 }
-section#container-signature table#signature {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+
+#notification {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+#notification.show {
+  visibility: visible;
+  animation: notification-fadein 0.5s, notification-fadeout 0.5s 2.5s;
+}
+
+@keyframes notification-fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@keyframes notification-fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,16 +1,13 @@
 const setDefaultIfEmpty = (input, element, defaultValue) => {
     element.innerHTML = input.value || defaultValue;
-    createsMarginInContacts();
 };
 
 const updateSrcIfEmpty = (input, element, defaultValue) => {
     element.src = input.value || defaultValue;
-    createsMarginInContacts();
 };
 
 const updateHrefIfEmpty = (input, element, defaultValue) => {
     element.href = input.value || defaultValue;
-    createsMarginInContacts();
 };
 
 const updateTelHrefIfEmpty = (input, element, defaultValue) => {

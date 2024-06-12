@@ -10,9 +10,12 @@
     <link rel="stylesheet" href="style.css">
 
     <script defer src="script.js"></script>
+    <script defer src="copySignature.js"></script>
 </head>
 
 <body>
+    <div id="notification">Contenu copié avec succès !</div>
+
     <section id="console">
         <div id="divInputImg">
             <div>
@@ -49,15 +52,6 @@
     </section>
 
     <section id="container-signature">
-        <div id="guide">
-            <ol>
-                <li>Presser <kbd>Cmd</kbd> + <kbd>A</kbd> puis <kbd>Cmd</kbd> + <kbd>C</kbd> pour copier la
-                    signature créée,</li>
-                <li>Aller dans les paramètres de Gmail puis dans la section "Signature",</li>
-                <li>Coller la signature avec <kbd>Cmd</kbd> + <kbd>V</kbd> .</li>
-            </ol>
-        </div>
-
         <table id="signature" border="0" cellpadding="0" cellspacing="0" width="548" height="196" style="
             padding-top: 24px;
             padding-bottom: 24px;
@@ -148,6 +142,78 @@
                 </td>
             </tr>
         </table>
+
+        <div id="guide">
+            <ol>
+                <li>
+                    Copier la signature :
+
+                    <ul>
+                        <li>
+                            Cliquez sur le bouton ci-dessous pour copier la signature :
+                            <br>
+                            <button id="copyButton">Copier la signature</button>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    Accéder aux paramètres de Gmail :
+
+                    <ul>
+                        <li>
+                            Ouvrez Gmail.
+                        </li>
+
+                        <li>
+                            Cliquez sur l'icône en forme de roue dentée en haut à droite de la page.
+                        </li>
+
+                        <li>
+                            Sélectionnez "Voir tous les paramètres" dans le menu déroulant.
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    Ajouter la signature :
+
+                    <ul>
+                        <li>
+                            Allez dans l'onglet "Général".
+                        </li>
+
+                        <li>
+                            Faites défiler vers le bas jusqu'à la section "Signature".
+                        </li>
+
+                        <li>
+                            Cliquez dans l'encart dédié à la signature.
+                        </li>
+
+                        <li>
+                            Collez la signature copiée (<kbd>Ctrl</kbd> + <kbd>V</kbd> ou <kbd>Cmd</kbd> + <kbd>V</kbd>
+                            sur
+                            Mac).
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    Enregistrer les modifications :
+
+                    <ul>
+                        <li>
+                            Faites défiler jusqu'en bas de la page.
+                        </li>
+
+                        <li>
+                            Cliquez sur "Enregistrer les modifications" pour valider votre nouvelle signature.
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
     </section>
 </body>
 
