@@ -54,11 +54,11 @@ const addSelectEventListener = (selectId, elementId) => {
 const createsEventListenersOnInputs = () => {
     const inputMappings = [
         { inputId: 'inputImg', elementId: 'srcImg', defaultValue: 'https://www.feelity.fr/wp-content/uploads/2024/06/benjamin.jpg', updater: updateSrcIfEmpty },
-        { inputId: 'inputName', elementId: 'textName', defaultValue: 'Benjamin Catinot', updater: setDefaultIfEmpty },
-        { inputId: 'inputTitle', elementId: 'textTitle', defaultValue: 'Co-Fondateur - CTO @Feelity', updater: setDefaultIfEmpty },
+        { inputId: 'inputName', elementId: 'textName', defaultValue: 'Prénom Nom', updater: setDefaultIfEmpty },
+        { inputId: 'inputTitle', elementId: 'textTitle', defaultValue: 'Titre', updater: setDefaultIfEmpty },
         { inputId: 'inputLinkedin', elementId: 'hrefLinkedin', defaultValue: 'https://www.linkedin.com/company/feelity/mycompany/', updater: updateHrefIfEmpty },
-        { inputId: 'inputMail', elementId: 'hrefMail', defaultValue: 'bcatinot@feelity.fr', updater: updateMailHrefIfEmpty },
-        { inputId: 'inputTel', elementId: 'hrefTel', defaultValue: '0642966109', updater: updateTelHrefIfEmpty }
+        { inputId: 'inputMail', elementId: 'hrefMail', defaultValue: 'hello@feelity.fr', updater: updateMailHrefIfEmpty },
+        { inputId: 'inputTel', elementId: 'hrefTel', defaultValue: '0521134532', updater: updateTelHrefIfEmpty }
     ];
 
     inputMappings.forEach(({ inputId, elementId, defaultValue, updater }) =>
