@@ -1,0 +1,94 @@
+$primary-color: #85878C;
+$background-color: #fff;
+$separator-color: #E0E0E0;
+$black: #121212;
+
+#signature {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: $background-color;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: $black;
+    border-spacing: unset;
+
+    p,
+    a {
+        margin: 0;
+        text-decoration: unset;
+        line-height: normal;
+    }
+
+    .left-content {
+        width: 104px;
+
+        & * {
+            display: block;
+        }
+
+        img#srcImg {
+            border-radius: 100%;
+            width: 64px;
+        }
+
+        img.logoFeelity {
+            width: 64px;
+            margin-top: 20px;
+        }
+
+        a {
+            margin-top: 4px;
+            font-size: 11px;
+            color: $black;
+            text-decoration: unset;
+        }
+    }
+
+    #separator {
+        background: $separator-color;
+        width: 1px;
+    }
+
+    .right-content {
+        padding: 0 20px;
+        vertical-align: top;
+
+        .names-table {
+            line-height: 0;
+
+            h1 {
+                margin: 0;
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+            img {
+                margin-left: 20px;
+                width: 24px;
+            }
+
+            a {
+                line-height: 0;
+            }
+        }
+
+        #textTitle {
+            margin: 4px 0 0 0;
+        }
+
+        .personal-information {
+            margin-top: 13px;
+
+            p,
+            a {
+                color: $primary-color;
+                display: block;
+            }
+
+            .address p,
+            #hrefTel {
+                margin-top: 4px;
+            }
+        }
+    }
+}

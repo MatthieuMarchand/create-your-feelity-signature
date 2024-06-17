@@ -13,11 +13,24 @@ const updateHrefIfEmpty = (input, element, defaultValue) => {
 const updateTelHrefIfEmpty = (input, element, defaultValue) => {
     element.href = `tel:${input.value || defaultValue}`;
     element.innerHTML = input.value || defaultValue;
+    createsMarginInContacts();
 };
 
 const updateMailHrefIfEmpty = (input, element, defaultValue) => {
     element.href = `mailto:${input.value || defaultValue}`;
     element.innerHTML = input.value || defaultValue;
+    createsMarginInContacts();
+};
+
+const createsMarginInContacts = () => {
+    const getElementWidth = id => document.getElementById(id).offsetWidth;
+
+    const divPersonalInformationWidth = getElementWidth('personal-information');
+    const divContactsWidth = getElementWidth('contacts');
+    const divAddressWidth = getElementWidth('address');
+
+    const marginRight = divPersonalInformationWidth - divContactsWidth - divAddressWidth - 5.2;
+    document.getElementById('contacts').style.marginRight = `${marginRight}px`;
 };
 
 const addInputEventListener = (inputId, elementId, defaultValue, updater) => {
@@ -31,6 +44,7 @@ const addSelectEventListener = (selectId, elementId) => {
     const element = document.getElementById(elementId);
     select.addEventListener('change', () => {
         element.src = select.value;
+        createsMarginInContacts();
     });
 };
 
@@ -52,5 +66,6 @@ const createsEventListenersOnInputs = () => {
 };
 
 window.addEventListener('DOMContentLoaded', () => {
+    createsMarginInContacts();
     createsEventListenersOnInputs();
 });
