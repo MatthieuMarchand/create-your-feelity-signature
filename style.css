@@ -31,7 +31,7 @@ body {
 button.cta-primary {
   padding: 0.25rem 1rem;
   background-color: #f6f6f6;
-  border: solid 1px #202020;
+  border: solid 1px #222;
   font-size: 20px;
   font-style: italic;
   transition: all 0.2s ease;
@@ -52,18 +52,18 @@ button.cta-primary {
   }
 }
 button.cta-primary:hover {
-  background-color: #202020;
+  background-color: #222;
   color: #f6f6f6;
 }
 button.cta-primary:active {
-  color: #202020;
+  color: #222;
   transition: unset;
 }
 
 section.section-setting {
   flex: 1;
   height: 100%;
-  background: #202020;
+  background: #222;
   display: flex;
   align-items: center;
   box-sizing: content-box;
@@ -104,7 +104,7 @@ section#console .portrait-input-wrapper select {
   height: 100%;
   padding: 1rem 0.5rem;
   border: solid 1px #f6f6f6;
-  background-color: #202020;
+  background-color: #222;
   color: #f6f6f6;
   font-size: 20px;
 }
@@ -144,7 +144,7 @@ section#console .input-wrapper label {
   transform: translateY(-50%);
   padding: 0 0.25rem;
   font-size: 20px;
-  background: #202020;
+  background: #222;
   color: #f6f6f6;
 }
 @media (max-width: 1200px) {
@@ -168,7 +168,7 @@ section#console .input-wrapper input {
   box-sizing: border-box;
   border-radius: 0;
   border: solid 1px #f6f6f6;
-  background: #202020;
+  background: #222;
   color: #f6f6f6;
   font-size: 20px;
 }
@@ -302,7 +302,7 @@ section#container-signature #guide kbd {
   background-color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
-  color: #202020;
+  color: #222;
   border-spacing: unset;
 }
 #signature p,
@@ -328,7 +328,7 @@ section#container-signature #guide kbd {
 #signature .left-content a {
   margin-top: 4px;
   font-size: 11px;
-  color: #202020;
+  color: #222;
   text-decoration: unset;
 }
 #signature #separator {
@@ -374,10 +374,11 @@ section#container-signature #guide kbd {
   visibility: hidden;
   min-width: 250px;
   margin-left: -125px;
-  background-color: #333;
-  color: #fff;
+  background-color: #222;
+  color: #f6f6f6;
   text-align: center;
   border-radius: 2px;
+  border: solid 1px #f6f6f6;
   padding: 16px;
   position: fixed;
   z-index: 1;
