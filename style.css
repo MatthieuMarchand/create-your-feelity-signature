@@ -1,151 +1,257 @@
-#signature {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  background-color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  color: #121212;
-  border-spacing: unset;
-}
-#signature p,
-#signature a {
-  margin: 0;
-  text-decoration: unset;
-  line-height: normal;
-}
-#signature .left-content {
-  width: 104px;
-}
-#signature .left-content * {
-  display: block;
-}
-#signature .left-content img#srcImg {
-  border-radius: 100%;
-  width: 64px;
-}
-#signature .left-content img.logoFeelity {
-  width: 64px;
-  margin-top: 20px;
-}
-#signature .left-content a {
-  margin-top: 4px;
-  font-size: 11px;
-  color: #121212;
-  text-decoration: unset;
-}
-#signature #separator {
-  background: #E0E0E0;
-  width: 1px;
-}
-#signature .right-content {
-  padding: 0 20px;
-  vertical-align: top;
-}
-#signature .right-content .names-table {
-  line-height: 0;
-}
-#signature .right-content .names-table h1 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 700;
-}
-#signature .right-content .names-table img {
-  margin-left: 20px;
-  width: 24px;
-}
-#signature .right-content .names-table a {
-  line-height: 0;
-}
-#signature .right-content #textTitle {
-  margin: 4px 0 0 0;
-}
-#signature .right-content .personal-information {
-  margin-top: 13px;
-}
-#signature .right-content .personal-information p,
-#signature .right-content .personal-information a {
-  color: #85878C;
-  display: block;
-}
-#signature .right-content .personal-information .address p,
-#signature .right-content .personal-information #hrefTel {
-  margin-top: 4px;
-}
-
 body {
   display: flex;
   height: 100vh;
   margin: 0;
   padding: 0;
-  font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
+  color: body black;
+  font-size: 20px;
+}
+@media (max-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
+@media (max-width: 900px) {
+  body {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  body {
+    flex-direction: column-reverse;
+  }
+}
+
+button.cta-primary {
+  padding: 0.25rem 1rem;
+  background-color: #f6f6f6;
+  border: solid 1px #202020;
+  font-size: 20px;
+  font-style: italic;
+  transition: all 0.2s ease;
+}
+@media (max-width: 1200px) {
+  button.cta-primary {
+    font-size: 20px;
+  }
+}
+@media (max-width: 900px) {
+  button.cta-primary {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  button.cta-primary {
+    font-size: 14px;
+  }
+}
+button.cta-primary:hover {
+  background-color: #202020;
+  color: #f6f6f6;
+}
+button.cta-primary:active {
   color: #202020;
+  transition: unset;
+}
+
+section.section-setting {
+  flex: 1;
+  height: 100%;
+  background: #202020;
+  display: flex;
+  align-items: center;
+  box-sizing: content-box;
+}
+@media screen and (max-width: 1000px) {
+  section.section-setting {
+    flex: 2;
+    display: unset;
+    align-items: unset;
+  }
+}
+@media screen and (min-width: 1000px) and (max-height: 700px) {
+  section.section-setting {
+    align-items: start;
+  }
 }
 
 section#console {
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
 }
-section#console input {
+@media screen and (max-width: 1000px) {
+  section#console {
+    padding: 1rem;
+  }
+}
+section#console .portrait-input-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+@media screen and (max-width: 1000px) {
+  section#console .portrait-input-wrapper .input-wrapper {
+    flex: 1;
+  }
+}
+section#console .portrait-input-wrapper select {
+  height: 100%;
+  padding: 1rem 0.5rem;
+  border: solid 1px #f6f6f6;
+  background-color: #202020;
+  color: #f6f6f6;
   font-size: 20px;
-  margin-bottom: 2rem;
-  margin-top: 0.5rem;
+}
+@media (max-width: 1200px) {
+  section#console .portrait-input-wrapper select {
+    font-size: 20px;
+  }
+}
+@media (max-width: 900px) {
+  section#console .portrait-input-wrapper select {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  section#console .portrait-input-wrapper select {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  section#console .portrait-input-wrapper select {
+    padding: 0.75rem 0.25rem;
+  }
+}
+section#console .input-wrapper {
+  position: relative;
+  margin-bottom: 3rem;
+}
+@media screen and (max-width: 1000px) {
+  section#console .input-wrapper {
+    margin-bottom: 1.5rem;
+  }
+}
+section#console .input-wrapper label {
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  transform: translateY(-50%);
+  padding: 0 0.25rem;
+  font-size: 20px;
+  background: #202020;
+  color: #f6f6f6;
+}
+@media (max-width: 1200px) {
+  section#console .input-wrapper label {
+    font-size: 20px;
+  }
+}
+@media (max-width: 900px) {
+  section#console .input-wrapper label {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  section#console .input-wrapper label {
+    font-size: 14px;
+  }
+}
+section#console .input-wrapper input {
   width: 20rem;
   padding: 1rem 0.5rem;
+  box-sizing: border-box;
   border-radius: 0;
-  border: solid 0.5px #202020;
-}
-section#console input::-moz-placeholder {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #808080;
+  border: solid 1px #f6f6f6;
+  background: #202020;
+  color: #f6f6f6;
   font-size: 20px;
-  font-weight: 100;
 }
-section#console input::placeholder {
+@media (max-width: 1200px) {
+  section#console .input-wrapper input {
+    font-size: 20px;
+  }
+}
+@media (max-width: 900px) {
+  section#console .input-wrapper input {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  section#console .input-wrapper input {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  section#console .input-wrapper input {
+    width: 100%;
+    padding: 0.75rem 0.25rem;
+  }
+}
+section#console .input-wrapper input::-moz-placeholder {
   font-family: Arial, Helvetica, sans-serif;
-  color: #808080;
+  color: rgba(246, 246, 246, 0.7);
   font-size: 20px;
-  font-weight: 100;
 }
-section#console #divInputImg {
+section#console .input-wrapper input::placeholder {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(246, 246, 246, 0.7);
+  font-size: 20px;
+}
+@media (max-width: 1200px) {
+  section#console .input-wrapper input::-moz-placeholder {
+    font-size: 20px;
+  }
+  section#console .input-wrapper input::placeholder {
+    font-size: 20px;
+  }
+}
+@media (max-width: 900px) {
+  section#console .input-wrapper input::-moz-placeholder {
+    font-size: 18px;
+  }
+  section#console .input-wrapper input::placeholder {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  section#console .input-wrapper input::-moz-placeholder {
+    font-size: 14px;
+  }
+  section#console .input-wrapper input::placeholder {
+    font-size: 14px;
+  }
+}
+
+section.section-signature {
+  flex: 1;
   display: flex;
-  align-items: end;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f6f6f6;
 }
-section#console #divInputImg select {
-  height: 3.5rem;
-  border-radius: 0;
-  border: solid 0.5px #202020;
-  padding: 1rem 0.5rem;
-}
-section#console #divInputImg div {
-  display: flex;
-  flex-direction: column;
-}
-section#console #divInputImg div input {
-  margin-bottom: unset;
+@media screen and (max-width: 1000px) {
+  section.section-signature {
+    flex: 1;
+  }
 }
 
 section#container-signature {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  flex-grow: 1;
+  gap: 1rem;
+  align-items: flex-end;
 }
 section#container-signature table#signature {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 section#container-signature #guide {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
   line-height: 150%;
 }
 section#container-signature #guide ol {
@@ -188,6 +294,80 @@ section#container-signature #guide kbd {
   font-size: 0.85em;
   line-height: 1;
   white-space: nowrap;
+}
+
+#signature {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #202020;
+  border-spacing: unset;
+}
+#signature p,
+#signature a {
+  margin: 0;
+  text-decoration: unset;
+  line-height: normal;
+}
+#signature .left-content {
+  width: 104px;
+}
+#signature .left-content * {
+  display: block;
+}
+#signature .left-content img#srcImg {
+  border-radius: 100%;
+  width: 64px;
+}
+#signature .left-content img.logoFeelity {
+  width: 64px;
+  margin-top: 20px;
+}
+#signature .left-content a {
+  margin-top: 4px;
+  font-size: 11px;
+  color: #202020;
+  text-decoration: unset;
+}
+#signature #separator {
+  background: #E0E0E0;
+  width: 1px;
+}
+#signature .right-content {
+  padding: 0 20px;
+  vertical-align: top;
+}
+#signature .right-content .names-table {
+  line-height: 0;
+}
+#signature .right-content .names-table h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+#signature .right-content .names-table img {
+  margin-left: 20px;
+  width: 24px;
+}
+#signature .right-content .names-table a {
+  line-height: 0;
+}
+#signature .right-content #textTitle {
+  margin: 4px 0 0 0;
+}
+#signature .right-content .personal-information {
+  margin-top: 13px;
+}
+#signature .right-content .personal-information p,
+#signature .right-content .personal-information a {
+  color: #85878C;
+  display: block;
+}
+#signature .right-content .personal-information .address p,
+#signature .right-content .personal-information #hrefTel {
+  margin-top: 4px;
 }
 
 #notification {
